@@ -8,11 +8,11 @@ export interface StringDecode<T> {
     (stringValue: string): T;
 }
 
-export const jsonStringEncode = <T>(value: T) => {
+export function jsonStringEncode<T>(value: T): string {
     return JSON.stringify(value);
 }
 
-export const jsonStringDecode = <T>(stringValue: string) => {
+export function jsonStringDecode<T>(stringValue: string): T {
     return JSON.parse(stringValue);
 };
 
